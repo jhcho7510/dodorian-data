@@ -1,15 +1,17 @@
 server:
-  port: 8080
+  port: 7510
   servlet:
-    context-path: /dodorian
+    context-path: /
     encoding:
       charset: UTF-8
       enabled: true
       force: true
 
 mybatis:
-  mapper-location:
-    classpath: mapper/*.xml
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.dodorian.*
+  configuration:
+    map-underscore-to-camel-case: true
 
 spring:
   datasource:
